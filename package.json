@@ -1,0 +1,29 @@
+{
+  "name": "automate_test",
+  "version": "1.0.0",
+  "description": "Automated test suite for POST Module (Expense & Income Management)",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:post": "playwright test tests_v1/Post/",
+    "test:post:chromium": "playwright test tests_v1/Post/ --project=chromium",
+    "test:post:firefox": "playwright test tests_v1/Post/ --project=firefox",
+    "test:post:webkit": "playwright test tests_v1/Post/ --project=webkit",
+    "test:post:debug": "playwright test tests_v1/Post/ --debug",
+    "test:post:headed": "playwright test tests_v1/Post/ --headed",
+    "test:post:ui": "playwright test tests_v1/Post/ --ui",
+    "test:approval": "playwright test tests_v1/Post/Approve_expenses.test.js",
+    "test:rejection": "playwright test tests_v1/Post/Reject_expenses.test.js",
+    "test:income": "playwright test tests_v1/Post/income.test.js",
+    "test:history": "playwright test tests_v1/Post/HistoryExpenses.test.js",
+    "test:dropdown": "playwright test tests_v1/Post/DropdownIncome.test.js",
+    "report": "playwright show-report"
+  },
+  "keywords": ["playwright", "automation", "testing", "expenses", "income"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.5.2"
+  }
+}
